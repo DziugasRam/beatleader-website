@@ -38,6 +38,7 @@
 	import Search from './components/Search/Search.svelte';
 	import LandingPage from './pages/LandingPage.svelte';
 	import SurveyAchievementPage from './pages/SurveyAchievement.svelte';
+	import Census from './pages/Census.svelte';
 
 	export let url = '';
 
@@ -120,6 +121,7 @@
 							<LandingPage />
 						{/if}
 					</Route>
+					<Route path="/census" component={Census} />
 					<Route path="/u/:initialPlayerId/*initialParams" let:params>
 						<PlayerPage initialPlayerId={params.initialPlayerId} initialParams={params.initialParams} />
 					</Route>
